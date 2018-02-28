@@ -1,22 +1,60 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Autosuggest from 'react-autosuggest';
+import { getSuggestions, getSuggestionValue, renderSuggestion } from './Autosuggest.js';
 
-class App extends Component {
+
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      value: '',
+      suggestions: []
+    };    
+  }
+
+  onChange = (event, { newValue, method }) => {
+    this.setState({
+      value: newValue
+    });
+  };
+  
+  onSuggestionsFetchRequested = ({ value }) => {
+    this.setState({
+      suggestions: getSuggestions(value)
+    });
+  };
+
+  onSuggestionsClearRequested = () => {
+    this.setState({
+      suggestions: []
+    });
+  };
+
   render() {
+    const { value, suggestions } = this.state;
+    const inputProps = {
+      placeholder: "Type 'c'",
+      value,
+      onChange: this.onChange
+    };
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Tamimi</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Autosuggest 
+        suggestions={suggestions}
+        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        getSuggestionValue={getSuggestionValue}
+        renderSuggestion={renderSuggestion}
+        inputProps={inputProps} />
     );
   }
+
 }
+
+
 
 export default App;
 
