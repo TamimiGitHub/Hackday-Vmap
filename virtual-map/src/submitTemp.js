@@ -16,3 +16,5 @@ render () {
   );
  } 
 }
+
+export default Submit
