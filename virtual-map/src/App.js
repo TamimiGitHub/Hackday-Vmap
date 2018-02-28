@@ -36,7 +36,7 @@ class App extends React.Component {
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "From",
+      placeholder: this.props.label,
       value,
       onChange: this.onChange
     };
