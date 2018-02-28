@@ -2,25 +2,9 @@ import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
 import AutosuggestHighlightMatch from 'autosuggest-highlight/match';
 import AutosuggestHighlightParse from 'autosuggest-highlight/parse';
+import people from './employees.js';
 
-const people = [
-  {
-    first: 'Charlie',
-    last: 'Brown',
-  },
-  {
-    first: 'Charlotte',
-    last: 'White',
-  },
-  {
-    first: 'Chloe',
-    last: 'Jones',
-  },
-  {
-    first: 'Cooper',
-    last: 'King',
-  }
-];
+
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
 function escapeRegexCharacters(str) {
