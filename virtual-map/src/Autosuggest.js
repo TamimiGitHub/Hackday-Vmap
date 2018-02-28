@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Autosuggest from 'react-autosuggest';
+import React from 'react';
 import AutosuggestHighlightMatch from 'autosuggest-highlight/match';
 import AutosuggestHighlightParse from 'autosuggest-highlight/parse';
 import people from './employees.js';

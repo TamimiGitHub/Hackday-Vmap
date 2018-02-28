@@ -254,7 +254,7 @@ const people =
   },
   {
     "first": "Tamimi",
-    "last": "Ahad",
+    "last": "Ahmad",
     "floor": 2,
     "horiz": "A",
     "vert": 4,

@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Autosuggest from 'react-autosuggest';
 import { getSuggestions, getSuggestionValue, renderSuggestion } from './Autosuggest.js';
-import { Router, Route, browserHistory } from 'react-router'
-import VirtualMap from './VirtualMap.js'
-import Calculate from './Calculate.js'
 
 class App extends React.Component {
   constructor() {
