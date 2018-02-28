@@ -7,7 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 const element = (
     <div>
       <App label="From"/> 
-      <App label="To"/> 
+      <App label="To"/>
     </div>
   );
 

@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Autosuggest from 'react-autosuggest';
 import { getSuggestions, getSuggestionValue, renderSuggestion } from './Autosuggest.js';
-
+import { Router, Route, browserHistory } from 'react-router'
+import VirtualMap from './VirtualMap.js'
+import Calculate from './Calculate.js'
 
 class App extends React.Component {
   constructor() {
@@ -42,13 +44,20 @@ class App extends React.Component {
     };
 
     return (
-      <Autosuggest 
+      <div>
+      <Autosuggest
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         inputProps={inputProps} />
+
+       <Router history={browserHistory}>
+       <Route path='/' component={Calculate} />
+       <Route path='/virtualmap' component={VirtualMap} />
+       </Router>
+       </div>
     );
   }
 
@@ -57,5 +66,7 @@ class App extends React.Component {
 
 
 export default App;
+
+
 
 
