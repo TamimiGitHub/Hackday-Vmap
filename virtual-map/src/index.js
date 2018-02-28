@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Submit from './submitTemp';
 import registerServiceWorker from './registerServiceWorker';
+
 
 const element = (
     <div>
       <App label="From"/> 
       <App label="To"/>
+      <Submit />
     </div>
   );
 

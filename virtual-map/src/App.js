@@ -44,20 +44,13 @@ class App extends React.Component {
     };
 
     return (
-      <div>
       <Autosuggest
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
-        inputProps={inputProps} />
-
-       <Router history={browserHistory}>
-       <Route path='/' component={Calculate} />
-       <Route path='/virtualmap' component={VirtualMap} />
-       </Router>
-       </div>
+        inputProps={inputProps} 
     );
   }
 
