@@ -10,10 +10,13 @@ body {
   width: 240px;
   height: 30px;
   padding: 10px 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-family: Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
-  border: 1px solid #aaa;
+  border: 5px solid #aaa;
   border-radius: 4px;
 }
 
@@ -32,7 +35,8 @@ body {
 
 .react-autosuggest__container--open .react-autosuggest__suggestions-container {
   display: block;
-  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   top: 51px;
   width: 280px;
   border: 1px solid #aaa;
@@ -69,22 +73,6 @@ body {
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
-}
-
-.dancounsell {
-  background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/48.jpg);
-}
-
-.ladylexy {
-  background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/48.jpg);
-}
-
-.mtnmissy {
-  background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/mtnmissy/48.jpg);
-}
-
-.steveodom {
-  background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/steveodom/48.jpg);
 }
 
 .name {
