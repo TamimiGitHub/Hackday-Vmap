@@ -1,0 +1,27 @@
+<html class="a-html">
+    <head>
+        <title>You.i Floor Plan</title>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    <body class="a-body">
+        <!-- ASSETS -->
+        <a-assets>
+            <a-asset-item id="floorModel" src="https://raw.githubusercontent.com/TamimiGitHub/Hackday-Vmap/master/virtual-map/templates/floorPlan4.dae"></a-asset-item>
+        </a-assets>
+        <!-- SCENE STARTS HERE -->
+        <a-scene>
+            <a-camera look-controls rotation="-55 0 0"></a-camera>
+            <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+            <!-- sun
+            <a-entity position="120 30 9.7" scale="2 2 2" rotation="-49.3 80.1 0" light="color:#D96943; decay:1.5; distance:300; intensity:3; penumbra:0.3; type:point; shadowBias:-0.27; shadowCameraNear:1; shadowMapHeight:1024" geometry="primitive:sphere; radius:1.5" material="shader:flat; color:#e69c84; fog:false"></a-entity>-->
+            <a-entity position="0 3.145 -0.692" light="type:point"></a-entity>
+            <!-- OBJECTS -->
+            <a-entity>
+                 <!--model-->
+                 <a-entity collada-model="#floorModel" material="color:blue" position="0 0 -1.2"></a-entity>
+                 <!-- marker -->
+                 <a-cylinder color="crimson" height="0" radius="0.3" position="-0.819 0.162 -0.347" opacity="0.5" scale="1.278 1.278 1.278" material="" geometry=""></a-cylinder>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
