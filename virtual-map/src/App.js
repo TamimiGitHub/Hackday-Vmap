@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Autosuggest from 'react-autosuggest';
 import { getSuggestions, getSuggestionValue, renderSuggestion } from './Autosuggest.js';
 

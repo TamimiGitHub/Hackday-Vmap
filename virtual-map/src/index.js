@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 const element = (
     <div>
+    <a href="/" id="logo">307 Virtual Map</a>
       <App label="From"/> 
       <App label="To"/>
       <Submit />
