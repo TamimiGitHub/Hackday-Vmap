@@ -1,3 +1,15 @@
+## How to
+
+1. `cd virtual-map`
+1. `npm install`
+1. `npm start`
+
+## Hack
+1. `cd virtual-map/src`
+1. `./hack.rb From To`
+
+#### Resources
+
 npm install -g create-react-app
 create-react-app virtual-map
 npm install react-autosuggest --save
